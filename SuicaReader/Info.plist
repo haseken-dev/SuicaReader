@@ -67,5 +67,7 @@
 	</array>
 	<key>NFCReaderUsageDescription</key>
 	<string>Suicaの残高読み取り等に利用します。</string>
+	<key>NSFaceIDUsageDescription</key>
+	<string>Face IDで認証を行います。</string>
 </dict>
 </plist>
