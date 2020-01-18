@@ -19,8 +19,8 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController {
-    @IBAction private func didTapSuicaReaderButton(_ sender: UIButton) {
+private extension ViewController {    
+    func read() {
         suicaReader.read(didDetect: { [unowned self]  reader, result in
             switch result {
             case .success(let suica):
@@ -31,6 +31,10 @@ extension ViewController {
                 reader.invalidate(errorMessage: error.localizedDescription)
             }
         })
+    }
+    
+    @IBAction private func didTapSuicaReaderButton(_ sender: UIButton) {
+        read()
     }
 }
 
