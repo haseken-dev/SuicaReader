@@ -10,9 +10,14 @@ import Foundation
 import LocalAuthentication
 
 public struct LocalAuthenticationUtility {
+    public enum AuthenticateError: Error {
+        case cannotEvaluatePolicy
+        case failAuthenticate
+    }
+    
     private static let context = LAContext()
     
-    public static func canEvaluatePolicy() -> NSError? {
+    static func canEvaluatePolicy() -> NSError? {
         var error: NSError?
         guard context.canEvaluatePolicy(.deviceOwnerAuthentication, error: &error) else {
             return error
@@ -21,15 +26,19 @@ public struct LocalAuthenticationUtility {
     }
 
     public static func authenticate(localizedReason description: String = "認証",
-                                    complication: @escaping ((Bool) -> ()),
-                                    fail: @escaping ((Error?) -> ())) {
+                                    complication: @escaping ((Result<Bool, AuthenticateError>, Error?) -> Void)) {
+        if let evaluateError = LocalAuthenticationUtility.canEvaluatePolicy() {
+            complication(.failure(.cannotEvaluatePolicy), evaluateError)
+            return
+        }
+        
         context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: description) { (success, error) in
             guard error == nil else {
-                fail(error)
+                complication(.failure(.failAuthenticate), error)
                 return
             }
             
-            complication(success)
+            complication(.success(success), nil)
         }
     }
 }

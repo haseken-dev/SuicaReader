@@ -28,22 +28,19 @@ final class ViewController: UIViewController {
 
 private extension ViewController {
     func authenticate() {
-        
-        let error = LocalAuthenticationUtility.canEvaluatePolicy()
-        guard error == nil else {
-            let errorDescription = error?.description ?? "Face ID / Touch IDが利用できません"
-            let alertController = UIAlertController(title: "", message: errorDescription, preferredStyle: .alert)
-            alertController.addAction(UIAlertAction(title: "OK", style: .cancel))
-            self.present(alertController, animated: true)
-            return
-        }
-        
         let description: String = "認証"
-        
-        LocalAuthenticationUtility.authenticate(localizedReason: description, complication: { (success) in
-        }) { _ in
-            return
-        }
+        LocalAuthenticationUtility.authenticate(localizedReason: description, complication: { (result, error) in
+            switch result {
+            case .success(true), .failure(.failAuthenticate), .success(false): break
+            case .failure(.cannotEvaluatePolicy):
+                if error != nil {
+                    let errorDescription = error?.localizedDescription ?? "Face ID / Touch IDが利用できません"
+                    let alertController = UIAlertController(title: "", message: errorDescription, preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "OK", style: .cancel))
+                    self.present(alertController, animated: true)
+                }
+            }
+        })
     }
     
     func read() {
