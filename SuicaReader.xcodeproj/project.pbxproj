@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1641B08123D75D4C008A6172 /* SuicaReaderFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1641B07823D75D4C008A6172 /* SuicaReaderFramework.framework */; };
+		1641B08823D75D4C008A6172 /* SuicaReaderFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1641B08723D75D4C008A6172 /* SuicaReaderFrameworkTests.swift */; };
+		1641B08A23D75D4C008A6172 /* SuicaReaderFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 1641B07A23D75D4C008A6172 /* SuicaReaderFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1641B08D23D75D4C008A6172 /* SuicaReaderFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1641B07823D75D4C008A6172 /* SuicaReaderFramework.framework */; };
+		1641B08E23D75D4C008A6172 /* SuicaReaderFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1641B07823D75D4C008A6172 /* SuicaReaderFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1641B09723D75E55008A6172 /* LocalAuthenticationUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1641B09623D75E55008A6172 /* LocalAuthenticationUtility.swift */; };
+		164BC36A23D614EE009B1488 /* NFCReader in Frameworks */ = {isa = PBXBuildFile; productRef = 164BC36923D614EE009B1488 /* NFCReader */; };
 		1655163323CCB2E00091AD8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1655163223CCB2E00091AD8E /* AppDelegate.swift */; };
 		1655163523CCB2E00091AD8E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1655163423CCB2E00091AD8E /* SceneDelegate.swift */; };
 		1655163723CCB2E00091AD8E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1655163623CCB2E00091AD8E /* ViewController.swift */; };
@@ -15,10 +22,33 @@
 		1655163F23CCB2E00091AD8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1655163D23CCB2E00091AD8E /* LaunchScreen.storyboard */; };
 		1655164A23CCB2E00091AD8E /* SuicaReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1655164923CCB2E00091AD8E /* SuicaReaderTests.swift */; };
 		1655165523CCB2E00091AD8E /* SuicaReaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1655165423CCB2E00091AD8E /* SuicaReaderUITests.swift */; };
-		1655166423CCB3580091AD8E /* NFCReader in Frameworks */ = {isa = PBXBuildFile; productRef = 1655166323CCB3580091AD8E /* NFCReader */; };
+		1694A4AE23D4AEA800339A5F /* Instantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1694A4AD23D4AEA800339A5F /* Instantiatable.swift */; };
+		1694A4B023D4AF7500339A5F /* IcCardHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1694A4AF23D4AF7500339A5F /* IcCardHistoryViewController.swift */; };
+		1694A4B223D4B16200339A5F /* IcCardHistoryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1694A4B123D4B16200339A5F /* IcCardHistoryViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1641B08223D75D4C008A6172 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1655162723CCB2DF0091AD8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1641B07723D75D4C008A6172;
+			remoteInfo = SuicaReaderFramework;
+		};
+		1641B08423D75D4C008A6172 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1655162723CCB2DF0091AD8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1655162E23CCB2DF0091AD8E;
+			remoteInfo = SuicaReader;
+		};
+		1641B08B23D75D4C008A6172 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1655162723CCB2DF0091AD8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1641B07723D75D4C008A6172;
+			remoteInfo = SuicaReaderFramework;
+		};
 		1655164623CCB2E00091AD8E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1655162723CCB2DF0091AD8E /* Project object */;
@@ -35,7 +65,28 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		1641B08F23D75D4C008A6172 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1641B08E23D75D4C008A6172 /* SuicaReaderFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1641B07823D75D4C008A6172 /* SuicaReaderFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SuicaReaderFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1641B07A23D75D4C008A6172 /* SuicaReaderFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuicaReaderFramework.h; sourceTree = "<group>"; };
+		1641B07B23D75D4C008A6172 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1641B08023D75D4C008A6172 /* SuicaReaderFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuicaReaderFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1641B08723D75D4C008A6172 /* SuicaReaderFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuicaReaderFrameworkTests.swift; sourceTree = "<group>"; };
+		1641B08923D75D4C008A6172 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1641B09623D75E55008A6172 /* LocalAuthenticationUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAuthenticationUtility.swift; sourceTree = "<group>"; };
 		1655162F23CCB2E00091AD8E /* SuicaReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuicaReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1655163223CCB2E00091AD8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1655163423CCB2E00091AD8E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,14 +102,33 @@
 		1655165423CCB2E00091AD8E /* SuicaReaderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuicaReaderUITests.swift; sourceTree = "<group>"; };
 		1655165623CCB2E00091AD8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1655166523CCB36A0091AD8E /* SuicaReader.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SuicaReader.entitlements; sourceTree = "<group>"; };
+		1694A4AD23D4AEA800339A5F /* Instantiatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instantiatable.swift; sourceTree = "<group>"; };
+		1694A4AF23D4AF7500339A5F /* IcCardHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IcCardHistoryViewController.swift; sourceTree = "<group>"; };
+		1694A4B123D4B16200339A5F /* IcCardHistoryViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IcCardHistoryViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1641B07523D75D4C008A6172 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1641B07D23D75D4C008A6172 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1641B08123D75D4C008A6172 /* SuicaReaderFramework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1655162C23CCB2DF0091AD8E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1655166423CCB3580091AD8E /* NFCReader in Frameworks */,
+				1641B08D23D75D4C008A6172 /* SuicaReaderFramework.framework in Frameworks */,
+				164BC36A23D614EE009B1488 /* NFCReader in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,12 +149,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		16416C6F23D376EF004CB4C6 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				1655163823CCB2E00091AD8E /* Main.storyboard */,
+				1655163623CCB2E00091AD8E /* ViewController.swift */,
+				1694A4AF23D4AF7500339A5F /* IcCardHistoryViewController.swift */,
+				1694A4B123D4B16200339A5F /* IcCardHistoryViewController.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		1641B07923D75D4C008A6172 /* SuicaReaderFramework */ = {
+			isa = PBXGroup;
+			children = (
+				1641B07A23D75D4C008A6172 /* SuicaReaderFramework.h */,
+				1641B07B23D75D4C008A6172 /* Info.plist */,
+				1641B09623D75E55008A6172 /* LocalAuthenticationUtility.swift */,
+			);
+			path = SuicaReaderFramework;
+			sourceTree = "<group>";
+		};
+		1641B08623D75D4C008A6172 /* SuicaReaderFrameworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				1641B08723D75D4C008A6172 /* SuicaReaderFrameworkTests.swift */,
+				1641B08923D75D4C008A6172 /* Info.plist */,
+			);
+			path = SuicaReaderFrameworkTests;
+			sourceTree = "<group>";
+		};
 		1655162623CCB2DF0091AD8E = {
 			isa = PBXGroup;
 			children = (
 				1655163123CCB2E00091AD8E /* SuicaReader */,
 				1655164823CCB2E00091AD8E /* SuicaReaderTests */,
 				1655165323CCB2E00091AD8E /* SuicaReaderUITests */,
+				1641B07923D75D4C008A6172 /* SuicaReaderFramework */,
+				1641B08623D75D4C008A6172 /* SuicaReaderFrameworkTests */,
 				1655163023CCB2E00091AD8E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,6 +197,8 @@
 				1655162F23CCB2E00091AD8E /* SuicaReader.app */,
 				1655164523CCB2E00091AD8E /* SuicaReaderTests.xctest */,
 				1655165023CCB2E00091AD8E /* SuicaReaderUITests.xctest */,
+				1641B07823D75D4C008A6172 /* SuicaReaderFramework.framework */,
+				1641B08023D75D4C008A6172 /* SuicaReaderFrameworkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,11 +206,11 @@
 		1655163123CCB2E00091AD8E /* SuicaReader */ = {
 			isa = PBXGroup;
 			children = (
+				1694A4AC23D4AE9300339A5F /* Protocol */,
+				16416C6F23D376EF004CB4C6 /* UI */,
 				1655166523CCB36A0091AD8E /* SuicaReader.entitlements */,
 				1655163223CCB2E00091AD8E /* AppDelegate.swift */,
 				1655163423CCB2E00091AD8E /* SceneDelegate.swift */,
-				1655163623CCB2E00091AD8E /* ViewController.swift */,
-				1655163823CCB2E00091AD8E /* Main.storyboard */,
 				1655163B23CCB2E00091AD8E /* Assets.xcassets */,
 				1655163D23CCB2E00091AD8E /* LaunchScreen.storyboard */,
 				1655164023CCB2E00091AD8E /* Info.plist */,
@@ -132,9 +236,65 @@
 			path = SuicaReaderUITests;
 			sourceTree = "<group>";
 		};
+		1694A4AC23D4AE9300339A5F /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				1694A4AD23D4AEA800339A5F /* Instantiatable.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		1641B07323D75D4C008A6172 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1641B08A23D75D4C008A6172 /* SuicaReaderFramework.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		1641B07723D75D4C008A6172 /* SuicaReaderFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1641B09423D75D4C008A6172 /* Build configuration list for PBXNativeTarget "SuicaReaderFramework" */;
+			buildPhases = (
+				1641B07323D75D4C008A6172 /* Headers */,
+				1641B07423D75D4C008A6172 /* Sources */,
+				1641B07523D75D4C008A6172 /* Frameworks */,
+				1641B07623D75D4C008A6172 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SuicaReaderFramework;
+			productName = SuicaReaderFramework;
+			productReference = 1641B07823D75D4C008A6172 /* SuicaReaderFramework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1641B07F23D75D4C008A6172 /* SuicaReaderFrameworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1641B09523D75D4C008A6172 /* Build configuration list for PBXNativeTarget "SuicaReaderFrameworkTests" */;
+			buildPhases = (
+				1641B07C23D75D4C008A6172 /* Sources */,
+				1641B07D23D75D4C008A6172 /* Frameworks */,
+				1641B07E23D75D4C008A6172 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1641B08323D75D4C008A6172 /* PBXTargetDependency */,
+				1641B08523D75D4C008A6172 /* PBXTargetDependency */,
+			);
+			name = SuicaReaderFrameworkTests;
+			productName = SuicaReaderFrameworkTests;
+			productReference = 1641B08023D75D4C008A6172 /* SuicaReaderFrameworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		1655162E23CCB2DF0091AD8E /* SuicaReader */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1655165923CCB2E00091AD8E /* Build configuration list for PBXNativeTarget "SuicaReader" */;
@@ -142,14 +302,16 @@
 				1655162B23CCB2DF0091AD8E /* Sources */,
 				1655162C23CCB2DF0091AD8E /* Frameworks */,
 				1655162D23CCB2DF0091AD8E /* Resources */,
+				1641B08F23D75D4C008A6172 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1641B08C23D75D4C008A6172 /* PBXTargetDependency */,
 			);
 			name = SuicaReader;
 			packageProductDependencies = (
-				1655166323CCB3580091AD8E /* NFCReader */,
+				164BC36923D614EE009B1488 /* NFCReader */,
 			);
 			productName = SuicaReader;
 			productReference = 1655162F23CCB2E00091AD8E /* SuicaReader.app */;
@@ -197,10 +359,18 @@
 		1655162723CCB2DF0091AD8E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1110;
+				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = "haseken-dev";
 				TargetAttributes = {
+					1641B07723D75D4C008A6172 = {
+						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
+					};
+					1641B07F23D75D4C008A6172 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 1655162E23CCB2DF0091AD8E;
+					};
 					1655162E23CCB2DF0091AD8E = {
 						CreatedOnToolsVersion = 11.1;
 					};
@@ -224,7 +394,7 @@
 			);
 			mainGroup = 1655162623CCB2DF0091AD8E;
 			packageReferences = (
-				1655166223CCB3580091AD8E /* XCRemoteSwiftPackageReference "NFCReader" */,
+				164BC36823D614EE009B1488 /* XCRemoteSwiftPackageReference "NFCReader" */,
 			);
 			productRefGroup = 1655163023CCB2E00091AD8E /* Products */;
 			projectDirPath = "";
@@ -233,15 +403,32 @@
 				1655162E23CCB2DF0091AD8E /* SuicaReader */,
 				1655164423CCB2E00091AD8E /* SuicaReaderTests */,
 				1655164F23CCB2E00091AD8E /* SuicaReaderUITests */,
+				1641B07723D75D4C008A6172 /* SuicaReaderFramework */,
+				1641B07F23D75D4C008A6172 /* SuicaReaderFrameworkTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1641B07623D75D4C008A6172 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1641B07E23D75D4C008A6172 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1655162D23CCB2DF0091AD8E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1694A4B223D4B16200339A5F /* IcCardHistoryViewController.storyboard in Resources */,
 				1655163F23CCB2E00091AD8E /* LaunchScreen.storyboard in Resources */,
 				1655163C23CCB2E00091AD8E /* Assets.xcassets in Resources */,
 				1655163A23CCB2E00091AD8E /* Main.storyboard in Resources */,
@@ -265,12 +452,30 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1641B07423D75D4C008A6172 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1641B09723D75E55008A6172 /* LocalAuthenticationUtility.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1641B07C23D75D4C008A6172 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1641B08823D75D4C008A6172 /* SuicaReaderFrameworkTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1655162B23CCB2DF0091AD8E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				1655163723CCB2E00091AD8E /* ViewController.swift in Sources */,
 				1655163323CCB2E00091AD8E /* AppDelegate.swift in Sources */,
+				1694A4B023D4AF7500339A5F /* IcCardHistoryViewController.swift in Sources */,
+				1694A4AE23D4AEA800339A5F /* Instantiatable.swift in Sources */,
 				1655163523CCB2E00091AD8E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,6 +499,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		1641B08323D75D4C008A6172 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1641B07723D75D4C008A6172 /* SuicaReaderFramework */;
+			targetProxy = 1641B08223D75D4C008A6172 /* PBXContainerItemProxy */;
+		};
+		1641B08523D75D4C008A6172 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1655162E23CCB2DF0091AD8E /* SuicaReader */;
+			targetProxy = 1641B08423D75D4C008A6172 /* PBXContainerItemProxy */;
+		};
+		1641B08C23D75D4C008A6172 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1641B07723D75D4C008A6172 /* SuicaReaderFramework */;
+			targetProxy = 1641B08B23D75D4C008A6172 /* PBXContainerItemProxy */;
+		};
 		1655164723CCB2E00091AD8E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1655162E23CCB2DF0091AD8E /* SuicaReader */;
@@ -326,6 +546,107 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1641B09023D75D4C008A6172 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 74X8PMB47V;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SuicaReaderFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ken-hasegawa.SuicaReaderFramework";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1641B09123D75D4C008A6172 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 74X8PMB47V;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SuicaReaderFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ken-hasegawa.SuicaReaderFramework";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1641B09223D75D4C008A6172 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 74X8PMB47V;
+				INFOPLIST_FILE = SuicaReaderFrameworkTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ken-hasegawa.SuicaReaderFrameworkTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SuicaReader.app/SuicaReader";
+			};
+			name = Debug;
+		};
+		1641B09323D75D4C008A6172 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 74X8PMB47V;
+				INFOPLIST_FILE = SuicaReaderFrameworkTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ken-hasegawa.SuicaReaderFrameworkTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SuicaReader.app/SuicaReader";
+			};
+			name = Release;
+		};
 		1655165723CCB2E00091AD8E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -443,6 +764,7 @@
 		1655165A23CCB2E00091AD8E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SuicaReader/SuicaReader.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -462,6 +784,7 @@
 		1655165B23CCB2E00091AD8E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SuicaReader/SuicaReader.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -565,6 +888,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1641B09423D75D4C008A6172 /* Build configuration list for PBXNativeTarget "SuicaReaderFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1641B09023D75D4C008A6172 /* Debug */,
+				1641B09123D75D4C008A6172 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1641B09523D75D4C008A6172 /* Build configuration list for PBXNativeTarget "SuicaReaderFrameworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1641B09223D75D4C008A6172 /* Debug */,
+				1641B09323D75D4C008A6172 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1655162A23CCB2DF0091AD8E /* Build configuration list for PBXProject "SuicaReader" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -604,9 +945,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		1655166223CCB3580091AD8E /* XCRemoteSwiftPackageReference "NFCReader" */ = {
+		164BC36823D614EE009B1488 /* XCRemoteSwiftPackageReference "NFCReader" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/tattn/NFCReader";
+			repositoryURL = "git@github.com:tattn/NFCReader.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.0.3;
@@ -615,9 +956,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1655166323CCB3580091AD8E /* NFCReader */ = {
+		164BC36923D614EE009B1488 /* NFCReader */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1655166223CCB3580091AD8E /* XCRemoteSwiftPackageReference "NFCReader" */;
+			package = 164BC36823D614EE009B1488 /* XCRemoteSwiftPackageReference "NFCReader" */;
 			productName = NFCReader;
 		};
 /* End XCSwiftPackageProductDependency section */

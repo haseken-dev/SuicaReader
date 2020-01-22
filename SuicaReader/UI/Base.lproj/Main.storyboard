@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MfS-Ry-djk">
-                                <rect key="frame" x="0.0" y="363" width="414" height="180"/>
+                                <rect key="frame" x="0.0" y="348" width="414" height="210"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="￥-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nYy-gu-3bI">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
@@ -34,7 +34,18 @@
                                             <action selector="didTapSuicaReaderButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="77e-0e-YZw"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Gv-mW-krz">
+                                        <rect key="frame" x="0.0" y="180" width="414" height="30"/>
+                                        <state key="normal" title="履歴表示"/>
+                                        <connections>
+                                            <action selector="didTapShowHistoryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5jD-VR-Jy7"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="8Gv-mW-krz" secondAttribute="trailing" id="RGD-m7-999"/>
+                                    <constraint firstItem="8Gv-mW-krz" firstAttribute="leading" secondItem="MfS-Ry-djk" secondAttribute="leading" id="qmt-h2-LJj"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -47,6 +58,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="historyButton" destination="8Gv-mW-krz" id="dqf-1n-WV7"/>
                         <outlet property="moneyLabel" destination="nYy-gu-3bI" id="Mvx-ip-9NU"/>
                     </connections>
                 </viewController>
