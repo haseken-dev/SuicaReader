@@ -11,8 +11,8 @@ import LocalAuthentication
 
 public struct LocalAuthenticationUtility {
     public enum AuthenticateError: Error {
-        case cannotEvaluatePolicy
-        case failAuthenticate
+        case cannotEvaluatePolicy(NSError?)
+        case failAuthenticate(Error?)
     }
     
     private static let context = LAContext()
@@ -26,19 +26,19 @@ public struct LocalAuthenticationUtility {
     }
 
     public static func authenticate(localizedReason description: String = "認証",
-                                    complication: @escaping ((Result<Bool, AuthenticateError>, Error?) -> Void)) {
+                                    complication: @escaping ((Result<Bool, AuthenticateError>) -> Void)) {
         if let evaluateError = LocalAuthenticationUtility.canEvaluatePolicy() {
-            complication(.failure(.cannotEvaluatePolicy), evaluateError)
+            complication(.failure(.cannotEvaluatePolicy(evaluateError)))
             return
         }
         
         context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: description) { (success, error) in
             guard error == nil else {
-                complication(.failure(.failAuthenticate), error)
+                complication(.failure(.failAuthenticate(error)))
                 return
             }
             
-            complication(.success(success), nil)
+            complication(.success(success))
         }
     }
 }

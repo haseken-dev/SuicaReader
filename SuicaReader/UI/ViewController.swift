@@ -29,10 +29,10 @@ final class ViewController: UIViewController {
 private extension ViewController {
     func authenticate() {
         let description: String = "認証"
-        LocalAuthenticationUtility.authenticate(localizedReason: description, complication: { (result, error) in
+        LocalAuthenticationUtility.authenticate(localizedReason: description, complication: { (result) in
             switch result {
-            case .success(true), .failure(.failAuthenticate), .success(false): break
-            case .failure(.cannotEvaluatePolicy):
+            case .success(_), .failure(.failAuthenticate): break
+            case .failure(.cannotEvaluatePolicy(let error)):
                 if error != nil {
                     let errorDescription = error?.localizedDescription ?? "Face ID / Touch IDが利用できません"
                     let alertController = UIAlertController(title: "", message: errorDescription, preferredStyle: .alert)
@@ -44,7 +44,7 @@ private extension ViewController {
     }
     
     func read() {
-        suicaReader.read(didDetect: { [unowned self]  reader, result in
+        suicaReader.read { [unowned self]  reader, result in
             switch result {
             case .success(let suica):
                 let balance = suica.cardInformation.balance
@@ -54,7 +54,7 @@ private extension ViewController {
             case .failure(let error):
                 reader.invalidate(errorMessage: error.localizedDescription)
             }
-        })
+        }
     }
     
     func convertToHistory(from boardingHistory: Suica.BoardingHistory) -> History {
